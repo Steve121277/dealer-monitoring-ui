@@ -1,0 +1,129 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.root_container {
+  margin: 20px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.state {
+  border-radius: 5px;
+  font-size: 40px;
+  width: 100%;
+  box-shadow: 0px 0px 5px black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.connecting {
+  color: darkblue;
+  font-size: 45px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.open {
+  color: green;
+  font-size: 45px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.close {
+  color: darkred;
+  font-size: 45px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.print_tree {
+  margin-top: 20px;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  padding-left: 50px;
+  padding-right: 20px;
+  font-size: 16px;
+  color: black;
+  position: relative;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.print_tree span.not_space {
+  z-index: 2;
+}
+
+.print_tree span.not_space:hover {
+  font-weight: 600;
+  font-size: 17px;
+  color: black;
+  cursor: pointer;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.print_tree .row {
+  position: absolute;
+  width: 97%;
+  left: 0;
+  height: 21px;
+  z-index: 1;
+}
+
+.print_tree .row:hover {
+  border: 0.5px solid gray;
+  border-radius: 5px;
+}
+
+.status_bar {
+  font-size: 14px;
+  text-align: center;
+}
+
+.main_content {
+  display: flex;
+  gap: 20px;
+}
+
+.service_list {
+  display: flex;
+  flex-direction: column;
+  gap: "15px";
+}
+
+.service_list_item {
+  cursor: pointer;
+}
+
+.service_list_item:hover {
+  border-bottom: 2px solid gray;
+}
+
+.service_list_item.selected {
+  border-bottom: 1px solid gray;
+}
+
+.count_tag {
+  border-radius: 20px;
+  background-color: burlywood;
+  padding: 3px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 3px;
+  font-weight: bold;
+}
+
+.count_tag.last {
+  color: red;
+}

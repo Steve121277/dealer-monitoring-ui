@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  prod:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - dev-public:/app/public
+      - dev-build:/app/build
+    command: "yarn start"
+
+volumes:
+  dev-public:
+  dev-build:
